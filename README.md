@@ -1,5 +1,7 @@
 # yolox-bubbliiiing-onnx
 
+共同探讨：QQ:10143512395
+
 目前困在了解码阶段。
 
 已完成：

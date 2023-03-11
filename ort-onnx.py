@@ -4,9 +4,9 @@ from math import exp, pow
 import cv2
 import numpy as np
 import onnxruntime as ort
-from numba import jit
 
-className = ["red", "green", "yellow", "black"]
+
+className = list(map(lambda x: x.strip(), open('coco.names', 'r').readlines())) # 可替换自己的类别文件
 # 替换对应yolo的Anchors值
 
 
@@ -30,7 +30,6 @@ def GetColors(color_num):
 
 
 #
-@jit
 def Sigmoid(x):
     # x = float(x)
     # out = max(x, 0)
